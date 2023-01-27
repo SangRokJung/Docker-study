@@ -6,12 +6,10 @@ COPY package.json .
 
 RUN npm install
 
-ENV PORT 80
-
 COPY . .
 
 EXPOSE 80
 
+# VOLUME [ "/app/node_modules" ]
 
-
-CMD [ "node", "server.js"] 
+CMD [ "npm", "start" ]
