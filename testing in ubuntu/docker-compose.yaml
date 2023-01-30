@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  linux:
+    build: .
+    container_name: ubt_test
+    ports:
+      - "20:2000"
+    volumes: 
+      - ./:/app
+      
+    # stdin_open: true
+    # tty: true   
